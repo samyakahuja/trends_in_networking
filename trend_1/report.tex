@@ -1,0 +1,48 @@
+\documentclass{article}
+\usepackage{graphicx,fancyhdr,amsmath,amssymb,amsthm,subfig,url,hyperref,epigraph,lipsum}
+\usepackage[margin=1in]{geometry}
+\setlength\epigraphwidth{.8\textwidth}
+
+% Bibliography
+\usepackage[backend=biber, style=authortitle-comp]{biblatex}
+\addbibresource{report.bib}
+
+%----------------------- Macros and Definitions --------------------------
+
+\renewcommand{\theenumi}{\bf \Alph{enumi}}
+
+\fancypagestyle{plain}{}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[RO,LE]{\sffamily\bfseries\large University of Delhi}
+\fancyhead[LO,RE]{\sffamily\bfseries\large MCS-204 Advanced Computer Networks}
+\fancyfoot[RO,LE]{\sffamily\bfseries\thepage}
+\renewcommand{\headrulewidth}{1pt}
+\renewcommand{\footrulewidth}{1pt}
+
+\graphicspath{{figures/}}
+
+%-------------------------------- Title ----------------------------------
+
+\title{Emerging Trends in Mobile Communications}
+\author{
+    Samyak Ahuja \\
+    \texttt{Class ID: 29}
+    \and
+    Mayank Kharbanda \\
+    \texttt{Class ID: 16}
+}
+
+%--------------------------------- Text ----------------------------------
+
+\begin{document}
+\maketitle
+
+\section{Trend Title}
+\epigraph{All men must serve.}{The faceless men, \textcite{dance-with-dragons-11}}
+\subsection{Introduction}
+\lipsum[1-1]
+
+\printbibliography
+
+\end{document}
