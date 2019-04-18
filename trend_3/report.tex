@@ -4,7 +4,7 @@
 \setlength\epigraphwidth{.8\textwidth}
 
 % Bibliography
-\usepackage[backend=biber, style=authortitle-comp]{biblatex}
+\usepackage[backend=biber, style=numeric, sorting=none]{biblatex}
 \addbibresource{report.bib}
 
 %----------------------- Macros and Definitions --------------------------
@@ -38,55 +38,107 @@
 \begin{document}
 \maketitle
 
+%--------------------------------- Title ----------------------------------
 \section{Li-Fi}
+
 \epigraph{There is a crack in everything.
 That's how the light gets in.}{\textcite{selected-poem}}
+
+
+%---------------------------- Introduction -------------------------------
+
 \subsection{Introduction}
-Today, when the world is exploring 5G technology, and smart devices are connecting to the cloud for fluid communication and IOT. Daily data traffic is increasing at the steepest rate. It has been estimated that, mobile data traffic will reach to 77 exabytes per month by 2022. \cite{cisco} It is not hidden from the industry that current transmission system is under pressure.\\
+
+Today, when the world is exploring 5G technology, and smart devices are connecting to the cloud for fluid communication and IOT. 
+Daily data traffic is increasing at the steepest rate. {It has been estimated that, mobile data traffic will reach to 77 exabytes per month by 2022. \cite{cisco}} 
+It is not hidden from the industry that current transmission system is under pressure.\\
+
+
 \begin{figure}[!h]
   \includegraphics{res/traffic_trend_li_fi.PNG}
-    \caption{Mobile data traffic}
+    \caption{Mobile data traffic \cite{cisco}}
   \label{fig:traffic_trend_li_fi}
 \end{figure}
 
+
 To revive the radio-wave spectrum from high traffic concentration, a new technology is attracting scientists, it's Visible light communication using the concept of Orthogonal Frequency Division Multiplexing(OFDM) or simply termed as Li-Fi(Light Fidelity).\newline
-Li-Fi was first introduced to the world by Prof. Herald Haas during a TEDGLobal Talk in July 2011. He showcased the potential of the technology to be integrated in the future communication system. From then, scientists from various parts of world started studying for various ways to improve the transmission method.\\
+Li-Fi was first introduced to the world by Prof. Herald Haas during a TEDGLobal Talk in July 2011.\cite{ted1} 
+He showcased the potential of the technology to be integrated in the future communication system. 
+From then, scientists from various parts of world started studying for various ways to improve the transmission method.\\
+
+
 \begin{figure}[!h]
   \includegraphics[width=\linewidth]{res/tech-illustration-li-fi.png}
-    \caption{Li-Fi}
+    \caption{Li-Fi \cite{purelifi}}
   \label{fig:tech-illustration-li-fi}
 \end{figure}
 
-The technology uses visible-light spectrum as a medium for data transmission. It comprises of a huge bandwidth of 400THz as compared to radio-waves in GHz. Moreover, visible light does not have any adverse effect on our body as that of radio-waves. LEDs are perfect candidates for light transmission as they have the property that their intensity can be changed at a very high speed.
+
+
+The technology uses visible-light spectrum as a medium for data transmission. It comprises of a huge bandwidth of 400THz as compared to radio-waves in GHz.
+Moreover, visible light does not have any adverse effect on our body as that of radio-waves. LEDs are perfect candidates for light transmission as they have the property that their intensity can be changed at a very high speed.
+
+
 
 \begin{figure}[!h]
   \includegraphics[width=\linewidth]{res/spectrum_li_fi.jpg}
-    \caption{spectrum comparison}
+    \caption{spectrum comparison \cite{spectrum}}
   \label{fig:spectrum_li_fi}
 \end{figure}
 
+
+%--------------------------------- Working --------------------------------
+
+
 \subsection{Working of Li-Fi}
+
+
+%------------------------ Modulation-Demodulation -------------------------
 \subsubsection{Modulation-Demodulation}
-The system uses Orthogonal Frequency Division Multiplexing(OFDM) for modulating the signals. As shown in the figure, first the transmitting data is mapped to complex symbols X(l) by some modulation scheme like M-QAM. Then signals are summed using IFFT(Inverse Fast Fourier Transformation). Then signal is guarded after P/S conversion and transmitted through light source.\\
-At the receiver's end, the signals are converted from serial to parallel and individual signals are extracted using FFT(Fast Fourier Transformation). Signals are then demodulated and send to the receiver. 
+
+{The system uses Orthogonal Frequency Division Multiplexing(OFDM) for modulating the signals. As shown in the figure, first the transmitting data is mapped to complex symbols X(l) by some modulation scheme like M-QAM. 
+Then signals are summed using IFFT(Inverse Fast Fourier Transformation). 
+Then signal is guarded after P/S conversion and transmitted through light source.\\{\cite{gen-ofdm}}}
+
+
+{At the receiver's end, the signals are converted from serial to parallel and individual signals are extracted using FFT(Fast Fourier Transformation). Signals are then demodulated and send to the receiver.{\cite{gen-ofdm}}}
+
+
+
 \begin{figure}[!h]
   \includegraphics[width=\linewidth]{res/OFDM_li_fi.PNG}
-    \caption{General OFDM}
+    \caption{General OFDM{\cite{gen-ofdm}}}
   \label{fig:OFDM_li_fi}
 \end{figure}
 
+
+%---------------------------- Hardware -----------------------------
 \subsubsection{Hardware Requirements}
-It requires two DSP(Digital Signal Processor) boards, at transmitter and receiver ends respectively, one LED bulb and a Photo-Diode reciever.\\
-The Electric Signal from the transmitter are first modulated using OFDM by the DSP board, installed between transmitter and the LED. The intensity of the LED to generate the signal is controlled by this DSP.\\
-At the other end, Photo-Diode receiver detects the high speed fluctuations of the intensity of LED. DSP connected to Photo-Diode receiver decodes the OFDM signals and transmits it to the receiver. The fluctuations caused in LED are so fast that it's impossible to detect them by naked eye, and hence serves the purpose of normal LED.
+
+{It requires two DSP(Digital Signal Processor) boards, at transmitter and receiver ends respectively, one LED bulb and a Photo-Diode reciever.\\
+The Electric Signal from the transmitter are first modulated using OFDM by the DSP board, installed between transmitter and the LED. 
+The intensity of the LED to generate the signal is controlled by this DSP.{\cite{hardware}}}\\
+
+
+{At the other end, Photo-Diode receiver detects the high speed fluctuations of the intensity of LED. DSP connected to Photo-Diode receiver decodes the OFDM signals and transmits it to the receiver.
+The fluctuations caused in LED are so fast that it's impossible to detect them by naked eye, and hence serves the purpose of normal LED.{\cite{hardware}}}
+
+
+
 \begin{figure}[!h]
   \includegraphics[width=\linewidth]{res/hardware_li_fi.PNG}
-    \caption{simple OW system}
+    \caption{simple OW system {\cite{hardware}}}
   \label{fig:hardware_li_fi}
 \end{figure}
-citation
+
+
+
+%----------------------------- Advantages -----------------------------
+
 \subsection{Advantages}
+
 \begin{description}
+    
     \item [Speed] Data transmission speed can reach as high as 224 gigabits per second under light transmission.
 
     \item [Bandwidth] The unused bandwidth of 400THz in Visible Light Spectrum can be exploit for transmission. 
@@ -99,8 +151,13 @@ citation
     
 \end{description}
 
+
+%------------------------ Misconceptions --------------------------------
+
 \subsection{Misconceptions}
+
 \begin{description}
+    
     \item [It won't work in dark] As data is transmitted through light, one can think that we have to switch on the LED always, and we cannot keep the room dark. But these LEDs can be dimmed low enough that it will not be visible to human eye and still can be used for transmission.
 
     \item [It won't work in fog] The PD receiver can detect the mere fluctuations from the light source even if there is fog in-between.
@@ -111,8 +168,13 @@ citation
     
 \end{description}
 
-\subsection{Global light communication standards}
-In 2019, IEEE announced formation of 802.11 bb task group which will develop and ratify the Global standard for Li-Fi, opening the doors for the use of technology at global level. The team aims to deliver the standards by mid 2021.
+%------------------------ Standardization -----------------------------
+\subsection{Global light communication standards{\cite{purelifi}}}
+
+In 2019, IEEE announced formation of 802.11 bb task group which will develop and ratify the Global standard for Li-Fi, opening the doors for the use of technology at global level. 
+The team aims to deliver the standards by mid 2021.
+
+
 
 \printbibliography
 
