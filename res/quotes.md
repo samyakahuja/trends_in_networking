@@ -47,3 +47,11 @@ way absorb it; do not become others.
 acceptance. Those who think ahead of their time are sure to be misunderstood.
 
 **citation** : The Complete works of Swami Vivekanand, Volume 5, 2009 Advaita Ashrama
+
+### Gustave Flaubert
+
+> I tried to discover, in the rumor of forests and waves, words that other men
+could not hear, and I pricked up my ears to listen to the revelation of their
+harmony.
+
+**citation** : November, 2005 Hesperus Press
