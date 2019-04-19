@@ -1,4 +1,4 @@
-\documentclass{article}
+\documentclass[notitlepage]{article}
 \usepackage{graphicx,fancyhdr,amsmath,amssymb,amsthm,subfig,url,hyperref,epigraph,lipsum}
 \usepackage[margin=1in]{geometry}
 \setlength\epigraphwidth{.8\textwidth}
@@ -9,8 +9,6 @@
 
 %----------------------- Macros and Definitions --------------------------
 
-\renewcommand{\theenumi}{\bf \Alph{enumi}}
-
 \fancypagestyle{plain}{}
 \pagestyle{fancy}
 \fancyhf{}
@@ -20,7 +18,9 @@
 \renewcommand{\headrulewidth}{1pt}
 \renewcommand{\footrulewidth}{1pt}
 
-\graphicspath{{figures/}}
+\makeatletter
+\newcommand*{\toccontents}{\@starttoc{toc}}
+\makeatother
 
 %-------------------------------- Title ----------------------------------
 
@@ -37,21 +37,14 @@
 
 \begin{document}
 
-\begin{titlepage}
-\centering
-\vfill
+\vspace{0.5in}
 \maketitle
-\begin{abstract}
-    TODO
-    \begin{enumerate}
-        \item Acoustic data transmission
-        \item LiFi
-    \end{enumerate}
-\end{abstract}
-\vfill
-\end{titlepage}
 
+\vspace{1in}
+\section*{Contents}
+\toccontents
 \newpage
+
 %--------------------------------TREND-1-----------------------------------
 
 \section{Acoustic data transmission}
