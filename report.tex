@@ -60,7 +60,7 @@ in 2019, as shown in Figure \ref{fig:ihs_iot}.  As IoT technology advances and t
 demand for efficient ways of communicating data between these devices grows,
 the world has witnessed a rise in emerging new data transmission technologies
 which are looking to provide secure and effective solutions for sharing
-information. One solution rising to meet these new demands is “data-over-sound”.
+information. One solution to meet these rising new demands is “data-over-sound”.
 
 \begin{figure}[!h]
   \includegraphics[width=\linewidth]{res/iot_market_trend.png}
@@ -236,7 +236,7 @@ when limited to ~17kHz-20kHz, which is imperceptible to most adult humans.
   \label{fig:dos_message}
 \end{figure}
 
-All of Chirp’s standard profiles are tested to perform at >99% reliability
+All of Chirp’s standard profiles are tested to perform at $>99\%$ reliability
 under normal operating conditions. Of the existing data-over-sound solutions
 on the market, the main differentiator for Chirp is this reliability and
 robustness of the internal decoding technology. This has been demonstrated and
@@ -519,12 +519,12 @@ the property that their intensity can be changed at a very high speed.
 %------------------------ Modulation-Demodulation -------------------------
 \subsubsection{Modulation-Demodulation}
 
-According to \textcite{dimitrov12}, the system uses Orthogonal Frequency Division
-Multiplexing(OFDM) for modulating the signals. As shown in the figure, first
-the transmitting data is mapped to complex symbols X(l) by some modulation
-scheme like M-QAM.  Then signals are summed using IFFT(Inverse Fast Fourier
-Transformation).  Then signal is guarded after P/S conversion and transmitted
-through light source.
+According to \textcite{dimitrov12}, the system uses Orthogonal Frequency
+Division Multiplexing(OFDM) for modulating the signals. As shown in the figure
+\ref{fig:OFDM_li_fi}, first the transmitting data is mapped to complex symbols
+X(l) by some modulation scheme like M-QAM.  Then signals are summed using
+IFFT(Inverse Fast Fourier Transformation).  Then signal is guarded after P/S
+conversion and transmitted through light source.
 
 At the receiver's end, the signals are converted from serial to parallel and
 individual signals are extracted using FFT(Fast Fourier Transformation).
