@@ -6,7 +6,7 @@ BIB = biber
 
 PDF = $(addsuffix .pdf, $(strip $(FILENAME)))
 REF = $(addsuffix .bib, $(strip $(FILENAME)))
-EXT = .aux .bbl .bcf .blg .log .out .run.xml .bib.blg
+EXT = .aux .bbl .bcf .blg .log .out .run.xml .bib.blg .toc
 AUX = $(addprefix $(strip $(FILENAME)),$(strip $(EXT)))
 
 .PHONY : all clean cleanall
