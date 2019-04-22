@@ -1,0 +1,57 @@
+\documentclass[notitlepage,hidelinks]{article}
+\usepackage{graphicx,fancyhdr,amsmath,amssymb,amsthm,subfig,url,hyperref,epigraph,lipsum,wrapfig}
+\usepackage[margin=1in]{geometry}
+\setlength\epigraphwidth{.8\textwidth}
+
+% Bibliography
+\usepackage[backend=biber, style=authortitle-comp, maxcitenames=1, refsection=section]{biblatex}
+\addbibresource{report.bib}
+
+%----------------------- Macros and Definitions --------------------------
+
+\fancypagestyle{plain}{}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[RO]{\sffamily\large University of Delhi}
+\fancyhead[LO]{\sffamily\large MCS-204 Advanced Computer Networks}
+\fancyfoot[RO]{\sffamily\thepage}
+\renewcommand{\headrulewidth}{1pt}
+\renewcommand{\footrulewidth}{1pt}
+
+\makeatletter
+\newcommand*{\toccontents}{\@starttoc{toc}}
+\makeatother
+
+%-------------------------------- Title ----------------------------------
+
+\title{Emerging Trends in Mobile Communications}
+\author{
+    Samyak Ahuja \\
+    \texttt{Roll Number - 29}
+    \and
+    Mayank Kharbanda \\
+    \texttt{Roll Number - 16}
+}
+\date{%
+    Group Number - 11\\[2ex]%
+    \today
+}
+%--------------------------------- Text ----------------------------------
+
+\begin{document}
+
+\vspace{0.5in}
+\maketitle
+
+\vspace{1in}
+\section*{Contents}
+\toccontents
+\newpage
+
+%--------------------------------TREND-----------------------------------
+
+\section{TREND NAME}
+\lipsum[1-1]
+
+\printbibliography[heading=subbibliography]
+\end{document}
