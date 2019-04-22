@@ -3,6 +3,7 @@
 FILENAME = report
 TEX = pdflatex
 BIB = biber
+NUM_FILES = 0
 
 PDF = $(addsuffix .pdf, $(strip $(FILENAME)))
 REF = $(addsuffix .bib, $(strip $(FILENAME)))
@@ -24,6 +25,16 @@ $(PDF): $(FILENAME).tex $(FILENAME).bib
 	@echo "    - pdflatex $< (pass 3/3)"
 	@$(TEX) $< > /dev/null 
 	@echo "==> Success!\n"
+
+.ONESHELL:
+gentrend : 
+	$(eval NUM_FILES=$(shell ls -d */ | grep trend_ | wc -l))
+	$(eval NUM_FILES=$(shell echo $$(($(NUM_FILES)+1))))
+	mkdir trend_$(NUM_FILES)
+	cd trend_$(NUM_FILES)
+	cp ../res/$(FILENAME).* .
+	cp ../Makefile .
+
 
 clean:
 	@echo "\n==> Cleaning directory of auxilary files\n"
